@@ -6,12 +6,12 @@
     deck.parent.appendChild(el);
   };
 
-	bespoke.horizontal.from('article', {
+  bespoke.horizontal.from('article', {
     backgroundElement: true,
     bullets: 'li, .bullet',
     hash: true,
     state: true
-	});
+  });
 
   (function preloadBackgroundImages() {
 
