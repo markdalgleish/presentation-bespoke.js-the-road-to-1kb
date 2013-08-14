@@ -1,0 +1,270 @@
+@import 'nib' // CSS3 extensions for Stylus: http://visionmedia.github.io/nib/
+
+// variables!
+
+slide_width = 640px
+slide_height = 480px
+slide_background = rgba(255,255,255,0.7)
+
+slide_transition_length = .6s
+slide_transition_easing = ease
+slide_transition_translate_x = 0
+slide_transition_rotate_y = 90deg
+
+bullet_transition_length = .3s
+bullet_transition_easing = ease
+bullet_transition_translate_x = 16px
+
+// base
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+// bespoke.js layout styles
+
+.background
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  box-shadow: inset 0 0 300px rgba(0,0,0,0.5)
+  z-index: -1
+
+article
+  display: none
+
+  &.bespoke-parent
+    display: block
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    overflow: hidden
+    perspective: 600px
+
+.bespoke-slide
+  transition: all slide_transition_length slide_transition_easing
+  transform-origin: 50% 50% ((slide_width / 2) * -1)
+  backface-visibility: hidden
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  text-align: center
+  width: slide_width
+  height: slide_height
+  position: absolute
+  top: 50%
+  margin-top: (slide_height / 2) * -1
+  left: 50%
+  margin-left: (slide_width / 2) * -1
+  background: slide_background
+  padding: 30px
+  border-radius: 0
+
+  > *:first-child
+    margin-top: 0
+
+  > *:last-child
+    margin-bottom: 0
+
+  &.dark
+    background: rgba(0,0,0,0.7)
+    color: white
+
+  &.generator
+    background-image: url('../images/bespoke-generator.png')
+    background-color: #292929
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 90%
+
+.bespoke-before
+  transform: translateX(slide_transition_translate_x * -1) rotateY(slide_transition_rotate_y * -1)
+
+.bespoke-after
+  transform: translateX(slide_transition_translate_x) rotateY(slide_transition_rotate_y)
+
+.bespoke-inactive
+  opacity: 0
+  pointer-events: none
+
+.bespoke-active
+  opacity: 1
+
+// bespoke-bullet styles
+
+.bespoke-bullet
+  transition: all bullet_transition_length bullet_transition_easing
+
+.bespoke-bullet-inactive
+  opacity: 0
+  li&
+    transform: translateX(bullet_transition_translate_x)
+
+.bespoke-bullet-active
+  opacity: 1
+
+// bespoke-state styles
+
+.emphatic,
+.emphatic .bespoke-slide
+  background: slide_background
+
+// prism styles
+
+code
+  font-size: 20px
+  padding: 16px 36px !important
+  max-width: 100%
+  margin: 10px 0;
+  max-width: 100%
+
+  &.min
+    background: none !important
+    padding: 10px !important
+    font-size: 10px
+
+  &.wrap
+    white-space: pre-wrap
+
+// content styles
+
+.background
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+
+body
+  background: #a0a0a0
+  font-family: helvetica, arial, sans-serif
+  font-size: 26px
+  color: #202020
+
+h1
+  font-size: 72px
+  line-height: 82px
+  letter-spacing: -2px
+  margin-bottom: 16px
+
+h2
+  font-size: 42px
+  letter-spacing: -1px
+  margin-bottom: 26px
+
+h3
+  font-size: 24px
+  font-weight: normal
+  margin: 20px 0 21px
+
+h2 + h3
+  margin-top: -10px
+
+hr
+  visibility: hidden
+  height: 20px
+
+ul
+  list-style: none
+
+li
+  margin-bottom: 12px
+
+p
+  margin: 0 100px 12px
+  line-height: 22px
+  margin-bottom: 26px
+
+a
+  color: #0093CC
+  text-decoration: none
+
+.me
+  size = 160px
+  background-image: url('../images/me.jpg')
+  background-size: 100%
+  width: size
+  height: size
+  border-radius: size
+  margin: 10px 0
+  opacity: 0.95
+
+.dimmed .background
+  -webkit-filter: brightness(50%)
+
+.blue .background
+  background-color: #60B3D3
+  box-shadow: inset 0 0 300px rgba(0,0,0,0.3)
+
+.backflip .background
+  background-image: url('../images/backflip.gif')
+
+.cleese .background
+  background-image: url('../images/cleese.gif')
+
+.colberthighfive .background
+  background-image: url('../images/colberthighfive.gif')
+
+.computerdance .background
+  background-image: url('../images/computerdance.gif')
+[data-bespoke-state='computerdance'] a
+  color: #DB004F
+
+.fullthrottle .background
+  background-image: url('../images/fullthrottle.gif')
+[data-bespoke-state^='fullthrottle'] a
+  color: #CC5200
+
+.gruntmicro .background
+  background-image: url('../images/gruntmicro.png')
+
+.martymcfly .background
+  background-image: url('../images/martymcfly.gif')
+
+.microjs .background
+  background-image: url('../images/microjs.png')
+
+.mindblown .background
+  background-image: url('../images/mindblown.gif')
+  -webkit-filter: brightness(50%)
+[data-bespoke-state^='mindblown'] a
+  color: #CC2900
+
+.napoleon .background
+  background-image: url('../images/napoleon.gif')
+[data-bespoke-state^='napoleon'] a
+  color: #FA5000
+
+.no .background
+  background-image: url('../images/no.gif')
+
+.ohboy .background
+  background-image: url('../images/ohboy.gif')
+
+.programming .background
+  background-image: url('../images/programming.gif')
+
+.pumped .background
+  background-image: url('../images/pumped.gif')
+
+.radcliffe .background
+  background-image: url('../images/radcliffe.gif')
+
+.seinfeldwhoa .background
+  background-image: url('../images/seinfeldwhoa.gif')
+
+.urkel .background
+  background-image: url('../images/urkel.gif')
+
+.whoa .background
+  background-image: url('../images/whoa.gif')
+[data-bespoke-state^='whoa'] a
+  color: #A12525
+
+.yeoman .background
+  background-image: url('../images/yeoman.png')
+  background-color: #202020
