@@ -243,35 +243,20 @@ a {
   -webkit-box-shadow: inset 0 0 300px rgba(0,0,0,0.3);
   box-shadow: inset 0 0 300px rgba(0,0,0,0.3);
 }
-.backflip .background {
-  background-image: url("../images/backflip.gif");
-}
-.cleese .background {
-  background-image: url("../images/cleese.gif");
-}
-.colberthighfive .background {
-  background-image: url("../images/colberthighfive.gif");
-}
-.computerdance .background {
-  background-image: url("../images/computerdance.gif");
-}
-[data-bespoke-state='computerdance'] a {
-  color: #db004f;
-}
 .fullthrottle .background {
   background-image: url("../images/fullthrottle.gif");
 }
 [data-bespoke-state^='fullthrottle'] a {
   color: #cc5200;
 }
-.gruntmicro .background {
-  background-image: url("../images/gruntmicro.png");
-}
 .martymcfly .background {
   background-image: url("../images/martymcfly.gif");
 }
-.microjs .background {
-  background-image: url("../images/microjs.png");
+.napoleon .background {
+  background-image: url("../images/napoleon.gif");
+}
+[data-bespoke-state^='napoleon'] a {
+  color: #fa5000;
 }
 .mindblown .background {
   background-image: url("../images/mindblown.gif");
@@ -280,11 +265,14 @@ a {
 [data-bespoke-state^='mindblown'] a {
   color: #cc2900;
 }
-.napoleon .background {
-  background-image: url("../images/napoleon.gif");
+.cleese .background {
+  background-image: url("../images/cleese.gif");
 }
-[data-bespoke-state^='napoleon'] a {
-  color: #fa5000;
+.microjs .background {
+  background-image: url("../images/microjs.png");
+}
+.urkel .background {
+  background-image: url("../images/urkel.gif");
 }
 .no .background {
   background-image: url("../images/no.gif");
@@ -292,20 +280,20 @@ a {
 .ohboy .background {
   background-image: url("../images/ohboy.gif");
 }
+.computerdance .background {
+  background-image: url("../images/computerdance.gif");
+}
+[data-bespoke-state='computerdance'] a {
+  color: #db004f;
+}
+.gruntmicro .background {
+  background-image: url("../images/gruntmicro.png");
+}
 .programming .background {
   background-image: url("../images/programming.gif");
 }
 .pumped .background {
   background-image: url("../images/pumped.gif");
-}
-.radcliffe .background {
-  background-image: url("../images/radcliffe.gif");
-}
-.seinfeldwhoa .background {
-  background-image: url("../images/seinfeldwhoa.gif");
-}
-.urkel .background {
-  background-image: url("../images/urkel.gif");
 }
 .whoa .background {
   background-image: url("../images/whoa.gif");
@@ -313,7 +301,19 @@ a {
 [data-bespoke-state^='whoa'] a {
   color: #a12525;
 }
+.seinfeldwhoa .background {
+  background-image: url("../images/seinfeldwhoa.gif");
+}
+.backflip .background {
+  background-image: url("../images/backflip.gif");
+}
+.radcliffe .background {
+  background-image: url("../images/radcliffe.gif");
+}
 .yeoman .background {
   background-image: url("../images/yeoman.png");
   background-color: #202020;
+}
+.colberthighfive .background {
+  background-image: url("../images/colberthighfive.gif");
 }
