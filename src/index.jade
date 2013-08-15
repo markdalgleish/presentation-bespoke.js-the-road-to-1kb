@@ -8,281 +8,281 @@ html
     link(rel='stylesheet', type='text/css', href='bower_components/prism/prism-tomorrow.css')
     link(rel='stylesheet', type='text/css', href='styles/main.css')
 
-    body
+  body
 
-      article
+    article
 
-        section(data-bespoke-state='fullthrottle')
-          h1 Bespoke.js: The Road to 1KB
+      section(data-bespoke-state='fullthrottle')
+        h1 Bespoke.js: The Road to 1KB
 
-        section(data-bespoke-state='martymcfly')
-          h1 What?
+      section(data-bespoke-state='martymcfly')
+        h1 What?
 
-        section(data-bespoke-state='napoleon')
-          h1
-            a(href='http://bit.ly/diyslides') bit.ly/diyslides
+      section(data-bespoke-state='napoleon')
+        h1
+          a(href='http://bit.ly/diyslides') bit.ly/diyslides
 
-        section(data-bespoke-state='mindblown')
-          h1 Google <a href="https://www.google.com/search?q=bespoke.js">"bespoke.js"</a>
+      section(data-bespoke-state='mindblown')
+        h1 Google <a href="https://www.google.com/search?q=bespoke.js">"bespoke.js"</a>
 
-        section(data-bespoke-state='cleese')
-          h1 Why?
+      section(data-bespoke-state='cleese')
+        h1 Why?
 
-        section.dark(data-bespoke-state='microjs')
-          h1.bullet &lt; = 5KB
-          h2.bullet No dependencies
+      section.dark(data-bespoke-state='microjs')
+        h1.bullet &lt; = 5KB
+        h2.bullet No dependencies
 
-        section.dark(data-bespoke-state='urkel')
-          code.language-javascript.min.wrap
-            pre.
-              /*! Bespoke.js v0.3 © 2013 Mark Dalgleish, Licensed MIT */
-              !function(a, b){var c=function(a, b){var c=document.querySelector(a), g=[].slice.call(c.children, 0), h=g[0], i={}, k=function(a, b){g[a]&&(p("deactivate", q(h, b)), h=g[a], g.map(l), p("activate", q(h, b)), e(h, "active"), f(h, "inactive"))}, l=function(a, b){var c=b-g.indexOf(h), d=c>0?"after":"before";["before(-\\d+)?", "after(-\\d+)?", "active", "inactive"].map(f.bind(0, a)), a!=h&&["inactive", d, d+"-"+Math.abs(c)].map(e.bind(0, a))}, m=function(a, b){p("slide", q(g[a], b))&&k(a, b)}, n=function(a, b){var c=g.indexOf(h)+a;p(a>0?"next":"prev", q(h, b))&&k(c, b)}, o=function(a, b){return(i[a]||(i[a]=[])).push(b), function(){i[a]=i[a].filter(function(a){return a!=b})}}, p=function(a, b){return(i[a]||[]).reduce(function(a, c){return a&&c(b)!==!1}, !0)}, q=function(a, b){return b=b||{}, b.index=g.indexOf(a), b.slide=a, b}, r={on:o, fire:p, slide:m, next:n.bind(0, 1), prev:n.bind(0, -1), parent:c, slides:g};e(c, "parent"), g.map(function(a){e(a, "slide")});for(var s in b)j[s](r, b[s]);return k(0), d.push(r), r}, d=[], e=function(b, c){b.classList.add(a+"-"+c)}, f=function(b, c){b.className=b.className.replace(RegExp(a+"-"+c+"(\\s|$)", "g"), " ").trim()}, g=function(a){return function(b){d.map(function(c){c[a](b)})}}, h=function(a){return{from:function(b, d){return(d=d||{})[a]=!0, c(b, d)}}}, i=function(a){return function(b){var c, d;document.addEventListener("keydown", function(c){(34==c.which||32==c.which||"X"==a&&39==c.which||"Y"==a&&40==c.which)&&b.next(), (33==c.which||"X"==a&&37==c.which||"Y"==a&&38==c.which)&&b.prev()}), b.parent.addEventListener("touchstart", function(b){1==b.touches.length&&(c=b.touches[0]["page"+a], d=0)}), b.parent.addEventListener("touchmove", function(b){1==b.touches.length&&(b.preventDefault(), d=b.touches[0]["page"+a]-c)}), b.parent.addEventListener("touchend", function(){Math.abs(d)>50&&(d>0?b.prev():b.next())})}}, j={horizontal:i("X"), vertical:i("Y")};b[a]={from:c, slide:g("slide"), next:g("next"), prev:g("prev"), horizontal:h("horizontal"), vertical:h("vertical"), plugins:j}}("bespoke", this);
+      section.dark(data-bespoke-state='urkel')
+        code.language-javascript.min.wrap
+          pre.
+            /*! Bespoke.js v0.3 © 2013 Mark Dalgleish, Licensed MIT */
+            !function(a, b){var c=function(a, b){var c=document.querySelector(a), g=[].slice.call(c.children, 0), h=g[0], i={}, k=function(a, b){g[a]&&(p("deactivate", q(h, b)), h=g[a], g.map(l), p("activate", q(h, b)), e(h, "active"), f(h, "inactive"))}, l=function(a, b){var c=b-g.indexOf(h), d=c>0?"after":"before";["before(-\\d+)?", "after(-\\d+)?", "active", "inactive"].map(f.bind(0, a)), a!=h&&["inactive", d, d+"-"+Math.abs(c)].map(e.bind(0, a))}, m=function(a, b){p("slide", q(g[a], b))&&k(a, b)}, n=function(a, b){var c=g.indexOf(h)+a;p(a>0?"next":"prev", q(h, b))&&k(c, b)}, o=function(a, b){return(i[a]||(i[a]=[])).push(b), function(){i[a]=i[a].filter(function(a){return a!=b})}}, p=function(a, b){return(i[a]||[]).reduce(function(a, c){return a&&c(b)!==!1}, !0)}, q=function(a, b){return b=b||{}, b.index=g.indexOf(a), b.slide=a, b}, r={on:o, fire:p, slide:m, next:n.bind(0, 1), prev:n.bind(0, -1), parent:c, slides:g};e(c, "parent"), g.map(function(a){e(a, "slide")});for(var s in b)j[s](r, b[s]);return k(0), d.push(r), r}, d=[], e=function(b, c){b.classList.add(a+"-"+c)}, f=function(b, c){b.className=b.className.replace(RegExp(a+"-"+c+"(\\s|$)", "g"), " ").trim()}, g=function(a){return function(b){d.map(function(c){c[a](b)})}}, h=function(a){return{from:function(b, d){return(d=d||{})[a]=!0, c(b, d)}}}, i=function(a){return function(b){var c, d;document.addEventListener("keydown", function(c){(34==c.which||32==c.which||"X"==a&&39==c.which||"Y"==a&&40==c.which)&&b.next(), (33==c.which||"X"==a&&37==c.which||"Y"==a&&38==c.which)&&b.prev()}), b.parent.addEventListener("touchstart", function(b){1==b.touches.length&&(c=b.touches[0]["page"+a], d=0)}), b.parent.addEventListener("touchmove", function(b){1==b.touches.length&&(b.preventDefault(), d=b.touches[0]["page"+a]-c)}), b.parent.addEventListener("touchend", function(){Math.abs(d)>50&&(d>0?b.prev():b.next())})}}, j={horizontal:i("X"), vertical:i("Y")};b[a]={from:c, slide:g("slide"), next:g("next"), prev:g("prev"), horizontal:h("horizontal"), vertical:h("vertical"), plugins:j}}("bespoke", this);
 
-        section(data-bespoke-state='no')
-          h1.bullet Feature request?
-          h2.bullet Just say no.
+      section(data-bespoke-state='no')
+        h1.bullet Feature request?
+        h2.bullet Just say no.
 
-        section.dark(data-bespoke-state='ohboy')
-          h1.bullet Want features?
-          h2.bullet Make it modular
+      section.dark(data-bespoke-state='ohboy')
+        h1.bullet Want features?
+        h2.bullet Make it modular
 
-        section(data-bespoke-state='computerdance')
-          ul
-            li
-              a(href='https://github.com/markdalgleish/bespoke-bullets') bespoke-bullets
-            li
-              a(href='https://github.com/markdalgleish/bespoke-hash') bespoke-hash
-            li
-              a(href='https://github.com/markdalgleish/bespoke-state') bespoke-state
-            li
-              a(href='https://github.com/markdalgleish/bespoke-loop') bespoke-loop
-            li
-              a(href='https://github.com/markdalgleish/bespoke-vcr') bespoke-vcr
-            li
-              a(href='https://github.com/markdalgleish/bespoke-spotlight') bespoke-spotlight
-            li
-              a(href='https://github.com/markdalgleish/bespoke-blackout') bespoke-blackout
+      section(data-bespoke-state='computerdance')
+        ul
+          li
+            a(href='https://github.com/markdalgleish/bespoke-bullets') bespoke-bullets
+          li
+            a(href='https://github.com/markdalgleish/bespoke-hash') bespoke-hash
+          li
+            a(href='https://github.com/markdalgleish/bespoke-state') bespoke-state
+          li
+            a(href='https://github.com/markdalgleish/bespoke-loop') bespoke-loop
+          li
+            a(href='https://github.com/markdalgleish/bespoke-vcr') bespoke-vcr
+          li
+            a(href='https://github.com/markdalgleish/bespoke-spotlight') bespoke-spotlight
+          li
+            a(href='https://github.com/markdalgleish/bespoke-blackout') bespoke-blackout
 
-        section.dark(data-bespoke-state='gruntmicro')
-          h1.bullet grunt-micro
-          ul
-            li (by me)
-            li JS too large?
-            li Break the build!
+      section.dark(data-bespoke-state='gruntmicro')
+        h1.bullet grunt-micro
+        ul
+          li (by me)
+          li JS too large?
+          li Break the build!
 
-        section(data-bespoke-state='mindblown')
-          h1 Google<br /><a href="https://www.google.com/search?q=grunt-micro">"grunt-micro"</a>
+      section(data-bespoke-state='mindblown')
+        h1 Google<br /><a href="https://www.google.com/search?q=grunt-micro">"grunt-micro"</a>
 
-        section(data-bespoke-state='programming')
-          h1.bullet Limit that size
-          ul
-            li ES5 / Modern Browser isn't a "dependency"
-            li Bonus: ES5 === expressive
+      section(data-bespoke-state='programming')
+        h1.bullet Limit that size
+        ul
+          li ES5 / Modern Browser isn't a "dependency"
+          li Bonus: ES5 === expressive
 
-        section(data-bespoke-state='pumped')
-          h1 Code time!
+      section(data-bespoke-state='pumped')
+        h1 Code time!
 
-        section(data-bespoke-state='whoa')
-          h2.bullet.bullet forEach
-          code.language-javascript.bullet
-            pre.
-              for(var i=0;i<things.length;i++){
-                doSomething(things[i]);
-              }
-          h3.bullet Vs.
-          code.language-javascript.bullet
-            pre.
-              things.forEach(doSomething);
-        section(data-bespoke-state='whoa')
-          h2.bullet Partial application
-          code.language-javascript.bullet
-            pre.
-              function(cls){ addClass(slide, cls); }
-          h3.bullet Vs.
-          code.language-javascript.bullet
-            pre.
-              addClass.bind(null, slide);
-          h3.bullet Function#bind returns a new function<br />with 'this' <em>and arguments</em> applied.
-        section(data-bespoke-state='pumped')
-          h1 Hack time!
-        section(data-bespoke-state='whoa')
-          h2.bullet forEach ~> map
-          code.language-javascript.bullet
-            pre.
-              arr.forEach(doSomething);
-          h3.bullet Vs.
-          code.language-javascript.bullet
-            pre.
-              arr.map(doSomething);
-          h3.bullet Array#map returns an array, just don't use it.
-        section(data-bespoke-state='whoa')
-          h2.bullet Undefined fallbacks
-          code.language-javascript.bullet
-            pre.
-              if(obj)Object.keys(obj).forEach(foo);
-          h3.bullet Vs.
-          code.language-javascript.bullet
-            pre.
-              Object.keys(obj||{}).forEach(foo);
-          hr
-          ul
-            li Object.keys on {} returns [].
-            li Array#forEach on [] does nothing.
-        section(data-bespoke-state='whoa')
-          h2.bullet RegExp doesn't need 'new'
-          code.language-javascript.bullet
-            pre.
-              new RegExp(foobar);
-          h3.bullet Vs.
-          code.language-javascript.bullet
-            pre.
-              RegExp(foobar);
-          h3
-            span.bullet Don't believe me?
-            a.bullet(href='http://es5.github.io/#x15.10.3.1')  Read the spec!
-        section(data-bespoke-state='whoa')
-          h2.bullet Assignment returns value
-          code.language-javascript.bullet
-            pre.
-              obj=obj||{};obj[prop] = true;
-          h3.bullet Vs.
-          code.language-javascript.bullet
-            pre.
-              (obj=obj||{})[prop] = true;
-        section(data-bespoke-state='whoa')
-          h2.bullet Double equals!
-          code.language-javascript.bullet
-            pre.
-              obj1 === obj2
-          h3.bullet Vs.
-          code.language-javascript.bullet
-            pre.
-              obj1 == obj2
-          h3.bullet Sorry Crockford, but<br />I know they're the same type.
+      section(data-bespoke-state='whoa')
+        h2.bullet.bullet forEach
+        code.language-javascript.bullet
+          pre.
+            for(var i=0;i<things.length;i++){
+              doSomething(things[i]);
+            }
+        h3.bullet Vs.
+        code.language-javascript.bullet
+          pre.
+            things.forEach(doSomething);
+      section(data-bespoke-state='whoa')
+        h2.bullet Partial application
+        code.language-javascript.bullet
+          pre.
+            function(cls){ addClass(slide, cls); }
+        h3.bullet Vs.
+        code.language-javascript.bullet
+          pre.
+            addClass.bind(null, slide);
+        h3.bullet Function#bind returns a new function<br />with 'this' <em>and arguments</em> applied.
+      section(data-bespoke-state='pumped')
+        h1 Hack time!
+      section(data-bespoke-state='whoa')
+        h2.bullet forEach ~> map
+        code.language-javascript.bullet
+          pre.
+            arr.forEach(doSomething);
+        h3.bullet Vs.
+        code.language-javascript.bullet
+          pre.
+            arr.map(doSomething);
+        h3.bullet Array#map returns an array, just don't use it.
+      section(data-bespoke-state='whoa')
+        h2.bullet Undefined fallbacks
+        code.language-javascript.bullet
+          pre.
+            if(obj)Object.keys(obj).forEach(foo);
+        h3.bullet Vs.
+        code.language-javascript.bullet
+          pre.
+            Object.keys(obj||{}).forEach(foo);
+        hr
+        ul
+          li Object.keys on {} returns [].
+          li Array#forEach on [] does nothing.
+      section(data-bespoke-state='whoa')
+        h2.bullet RegExp doesn't need 'new'
+        code.language-javascript.bullet
+          pre.
+            new RegExp(foobar);
+        h3.bullet Vs.
+        code.language-javascript.bullet
+          pre.
+            RegExp(foobar);
+        h3
+          span.bullet Don't believe me?
+          a.bullet(href='http://es5.github.io/#x15.10.3.1')  Read the spec!
+      section(data-bespoke-state='whoa')
+        h2.bullet Assignment returns value
+        code.language-javascript.bullet
+          pre.
+            obj=obj||{};obj[prop] = true;
+        h3.bullet Vs.
+        code.language-javascript.bullet
+          pre.
+            (obj=obj||{})[prop] = true;
+      section(data-bespoke-state='whoa')
+        h2.bullet Double equals!
+        code.language-javascript.bullet
+          pre.
+            obj1 === obj2
+        h3.bullet Vs.
+        code.language-javascript.bullet
+          pre.
+            obj1 == obj2
+        h3.bullet Sorry Crockford, but<br />I know they're the same type.
 
-        section(data-bespoke-state='pumped')
-          h1 Actual solution time!
-        section(data-bespoke-state='seinfeldwhoa')
-          h1 Let's assume a lib like this
-        section(data-bespoke-state='seinfeldwhoa')
-          code.language-javascript
-            pre.
-              myLib({
-                foo: true,
-                bar: false,
-                baz: 'quz'
+      section(data-bespoke-state='pumped')
+        h1 Actual solution time!
+      section(data-bespoke-state='seinfeldwhoa')
+        h1 Let's assume a lib like this
+      section(data-bespoke-state='seinfeldwhoa')
+        code.language-javascript
+          pre.
+            myLib({
+              foo: true,
+              bar: false,
+              baz: 'quz'
+            });
+      section(data-bespoke-state='seinfeldwhoa')
+        h1 Don't write it<br />like this
+      section(data-bespoke-state='seinfeldwhoa')
+        code.language-javascript
+          pre.
+            var myLib = function(options) {
+              if (options.foo) doThis();
+              if (options.bar) doSomeOtherStuff();
+              if (options.baz) coverSomeWeirdEdgeCase();
+            };
+      section(data-bespoke-state='seinfeldwhoa')
+        h1 Write it like this
+      section(data-bespoke-state='seinfeldwhoa')
+        code.language-javascript.bullet
+          pre.
+            var myLib = function(plugins) {
+              for (var name in plugins) {
+                var value = plugins[name];
+                myLib.plugins[name](value);
               });
-        section(data-bespoke-state='seinfeldwhoa')
-          h1 Don't write it<br />like this
-        section(data-bespoke-state='seinfeldwhoa')
-          code.language-javascript
-            pre.
-              var myLib = function(options) {
-                if (options.foo) doThis();
-                if (options.bar) doSomeOtherStuff();
-                if (options.baz) coverSomeWeirdEdgeCase();
-              };
-        section(data-bespoke-state='seinfeldwhoa')
-          h1 Write it like this
-        section(data-bespoke-state='seinfeldwhoa')
-          code.language-javascript.bullet
-            pre.
-              var myLib = function(plugins) {
-                for (var name in plugins) {
-                  var value = plugins[name];
-                  myLib.plugins[name](value);
-                });
-              };
+            };
 
-          code.language-javascript.bullet
-            pre.
-              myLib.plugins.baz = function() {
-                coverSomeWeirdEdgeCase();
-              }; // etc...
+        code.language-javascript.bullet
+          pre.
+            myLib.plugins.baz = function() {
+              coverSomeWeirdEdgeCase();
+            }; // etc...
 
-        section(data-bespoke-state='cleese')
-          h1 Why?
+      section(data-bespoke-state='cleese')
+        h1 Why?
 
-        section(data-bespoke-state='backflip')
-          h2.bullet Tiny core library
-          h2.bullet Extremely modular
-          h2.bullet Repo per feature
+      section(data-bespoke-state='backflip')
+        h2.bullet Tiny core library
+        h2.bullet Extremely modular
+        h2.bullet Repo per feature
 
-        section(data-bespoke-state='mindblown')
-          h1 Bower package per feature.
+      section(data-bespoke-state='mindblown')
+        h1 Bower package per feature.
 
-        section(data-bespoke-state='radcliffe')
-          h1 Seriously, why?
+      section(data-bespoke-state='radcliffe')
+        h1 Seriously, why?
 
-        section(data-bespoke-state='yeoman')
-          h1 Yeoman.
+      section(data-bespoke-state='yeoman')
+        h1 Yeoman.
 
-        section(data-bespoke-state='yeoman')
-          h2.bullet Introducing...
-          h1.bullet generator-bespoke
+      section(data-bespoke-state='yeoman')
+        h2.bullet Introducing...
+        h1.bullet generator-bespoke
 
-        section(data-bespoke-state='blue')
-          code.language-bash.bullet.
-            $ npm install -g yo generator-bespoke
-          code.language-bash.bullet.
-            $ yo bespoke
+      section(data-bespoke-state='blue')
+        code.language-bash.bullet.
+          $ npm install -g yo generator-bespoke
+        code.language-bash.bullet.
+          $ yo bespoke
 
-        section.generator(data-bespoke-state='blue')
+      section.generator(data-bespoke-state='blue')
 
-        section(data-bespoke-state='blue')
-          h1.bullet Generates bower.json
-          h2.bullet (Among other things)
+      section(data-bespoke-state='blue')
+        h1.bullet Generates bower.json
+        h2.bullet (Among other things)
 
-        section(data-bespoke-state='blue')
-          code.language-javascript
-            pre.
-              {
-                "name": "hello-world-bespoke",
-                "version": "0.0.0",
-                "dependencies": {
-                  "bespoke.js": "~0.2.0",
-                  "bespoke-bullets": "~0.2.0",
-                  "bespoke-hash": "~0.1.0",
-                  "bespoke-state": "~0.2.0",
-                  "prism": "gh-pages"
-                }
+      section(data-bespoke-state='blue')
+        code.language-javascript
+          pre.
+            {
+              "name": "hello-world-bespoke",
+              "version": "0.0.0",
+              "dependencies": {
+                "bespoke.js": "~0.2.0",
+                "bespoke-bullets": "~0.2.0",
+                "bespoke-hash": "~0.1.0",
+                "bespoke-state": "~0.2.0",
+                "prism": "gh-pages"
               }
+            }
 
-        section(data-bespoke-state='blue')
-          h1.bullet Plus heaps more
-          hr
-          ul
-            li Boilerplate presentation
-            li Grunt build system
-            li Preview server + LiveReload
-            li Compiles Jade, Stylus, CoffeeScript
-            li Syntax highlighting with <a href="http://prismjs.com">Prism</a>
+      section(data-bespoke-state='blue')
+        h1.bullet Plus heaps more
+        hr
+        ul
+          li Boilerplate presentation
+          li Grunt build system
+          li Preview server + LiveReload
+          li Compiles Jade, Stylus, CoffeeScript
+          li Syntax highlighting with <a href="http://prismjs.com">Prism</a>
 
-        section(data-bespoke-state='blue')
-          h1 Bonus!
+      section(data-bespoke-state='blue')
+        h1 Bonus!
 
-        section(data-bespoke-state='colberthighfive')
-          h1.bullet GitHub Pages deploy task
-          hr
-          h2.bullet Publishing your deck is stupid easy.
+      section(data-bespoke-state='colberthighfive')
+        h1.bullet GitHub Pages deploy task
+        hr
+        h2.bullet Publishing your deck is stupid easy.
 
-        section(data-bespoke-state='pumped')
-          h1 Demo time!
+      section(data-bespoke-state='pumped')
+        h1 Demo time!
 
-        section(data-bespoke-state='mindblown')
-          h1 Google <a href="https://www.google.com/search?q=generator-bespoke">"generator-bespoke"</a>
+      section(data-bespoke-state='mindblown')
+        h1 Google <a href="https://www.google.com/search?q=generator-bespoke">"generator-bespoke"</a>
 
-        section(data-bespoke-state='fullthrottle dimmed')
-          .me
-          h1 Thank you!
-          h2
-            a(href='http://bit.ly/roadto1kb') bit.ly/roadto1kb
-          h3
-            a(href='http://twitter.com/markdalgleish') @markdalgleish
+      section(data-bespoke-state='fullthrottle dimmed')
+        .me
+        h1 Thank you!
+        h2
+          a(href='http://bit.ly/roadto1kb') bit.ly/roadto1kb
+        h3
+          a(href='http://twitter.com/markdalgleish') @markdalgleish
 
-      script(src='bower_components/bespoke.js/dist/bespoke.min.js')
-      script(src='bower_components/bespoke-bullets/dist/bespoke-bullets.min.js')
-      script(src='bower_components/bespoke-hash/dist/bespoke-hash.min.js')
-      script(src='bower_components/bespoke-state/dist/bespoke-state.min.js')
-      script(src='bower_components/prism/prism.js')
-      script(src='scripts/main.js')
+    script(src='bower_components/bespoke.js/dist/bespoke.min.js')
+    script(src='bower_components/bespoke-bullets/dist/bespoke-bullets.min.js')
+    script(src='bower_components/bespoke-hash/dist/bespoke-hash.min.js')
+    script(src='bower_components/bespoke-state/dist/bespoke-state.min.js')
+    script(src='bower_components/prism/prism.js')
+    script(src='scripts/main.js')
